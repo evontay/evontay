@@ -1,0 +1,7 @@
+<h2>This is our educations route</h2>
+{{outlet}}
+
+{{#each model as |education|}}
+  <h3>{{education.school}}</h3>
+  <p><{{education.qualifications}}</p>
+{{/each}}
