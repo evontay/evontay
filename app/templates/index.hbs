@@ -1,42 +1,34 @@
-{{#each model.profiles as |profile|}}
-  <h3>{{profile.name}}</h3>
-  <p><{{profile.email}}</p>
-  <p>{{profile.description}}</p>
-  <p><a href="{{profile.github}}">Github</a></p>
-  <p><a href="{{profile.linkedin}}">LinkedIn</a></p>
-  <p><a href="{{profile.twitter}}">Twitter</a></p>
-  <p><a href="{{profile.dribbble}}">Dribbble</a></p>
-  <p><a href="{{profile.behance}}">Behance</a></p>
-  <p><a href="{{profile.medium}}">Medium</a></p>
-{{/each}}
+<header>
+  {{#each model.profiles as |profile|}}
+    <!-- <h3>{{profile.name}}</h3> -->
+    <!-- <p><{{profile.email}}</p> -->
+    <ul class="social">
+      <li><a href="{{profile.github}}"><img src="./img/github.svg"></a></li>
+      <li><a href="{{profile.linkedin}}"><img src="./img/linkedin.svg"></a></li>
+      <li><a href="{{profile.twitter}}"><img src="./img/twitter.svg"></a></li>
+      <li><a href="{{profile.dribbble}}"><img src="./img/dribbble.svg"></a></li>
+      <li><a href="{{profile.behance}}"><img src="./img/behance.svg"></a></li>
+      <li><a href="{{profile.medium}}"><img src="./img/medium.svg"></a></li>
+    </ul>
+    <h3 class="serif intro">{{profile.description}}</h3>
 
+  {{/each}}
+</header>
 
-<!-- <h2>This is our projects route</h2>
-{{#each model.projects as |project|}}
-  <h3>{{project.title}}</h3>
-  <p><{{project.description}}</p>
-  <p>{{project.github}}</p>
-  <p>{{project.website}}</p>
-  <img src="{{project.image1}}"/>
-  <img src="{{project.image2}}"/>
-{{/each}} -->
-
-<h2>This is our works route</h2>
-{{#each model.works as |work|}}
-  <h3>{{work.company}}</h3>
-  <p><{{work.role}}</p>
-  <p>{{work.description}}</p>
-{{/each}}
-
-<h2>This is our educations route</h2>
-{{#each model.educations as |education|}}
-  <h3>{{education.school}}</h3>
-  <p><{{education.qualifications}}</p>
-{{/each}}
-
-
-<h2>Projects</h2>
+<h2 class="serif">Projects</h2>
 {{#each model.projects as |project|}}
     {{#show-projects item=project}}
     {{/show-projects}}
+{{/each}}
+
+<h2 class="serif">Where I've been</h2>
+{{#each model.works as |work|}}
+    {{#show-work item=work}}
+    {{/show-work}}
+{{/each}}
+
+<h2 class="serif">What I've Studied</h2>
+{{#each model.educations as |education|}}
+    {{#show-education item=education}}
+    {{/show-education}}
 {{/each}}

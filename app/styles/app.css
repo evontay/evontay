@@ -1,0 +1,182 @@
+@import url("./reset.css");
+
+body {
+  background-color: #dfdede;
+  background-repeat: no-repeat;
+  font-family: 'Raleway', sans-serif;
+  color: #555;
+}
+
+.bigwrap {
+  padding: 20px;
+}
+
+/* ===== TEXT FORMATTING ===== */
+
+.serif {font-family: 'Crimson Text', serif;}
+.sans {font-family: 'Raleway', sans-serif;}
+
+h1 {font-size: 3.5em;}
+h2 {font-size: 2.5em;}
+h3 {font-size: 2em;}
+h4 {font-size: 1.8em;}
+h5 {font-size: 1.6em;}
+h6 {font-size: 1.3em;}
+p {font-size: 1.5em;}
+
+.reg {font-weight: 400}
+.med {font-weight: 600}
+.bold2 {font-weight: 700}
+.black {font-weight: 800}
+
+/* ===== HEADER ===== */
+header {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.intro {
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.4;
+  color: #555;
+}
+.social {
+  margin: 30px auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: row;
+}
+
+.social > li {
+  flex: 1;
+  padding: 20px;
+}
+
+/* ===== PROJECTS ===== */
+.proj-item {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  background-color: #f1eded;
+}
+
+.st {
+  width: 50px;
+  border: 1px solid #888;
+  margin: 20px 0 30px 0;
+}
+
+.proj-info {
+  flex:2;
+  line-height: 1.5;
+  padding: 20px;
+  color: #888;
+}
+
+.proj-info p, .proj-info h2 {
+  width: 80%;
+}
+
+.proj-info h2 {
+  line-height: 1.1;
+  margin-bottom: 30px;
+}
+
+.proj-img {
+  flex:3;
+  box-sizing: content-box;
+}
+
+.proj-img > img {
+  max-width: 100%;
+}
+
+.proj-btn-grp {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0;
+}
+
+.proj-btn {
+  flex: 1;
+  border: 2px solid #888;
+  color: #888;
+  text-align: center;
+  padding: 10px;
+  max-width: 70px;
+  margin-right: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.proj-btn:hover {
+  background-color: #888;
+  color: #fff;
+}
+
+/* ===== RESUME ===== */
+
+.work, .education {
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.work-item, .education-item {
+  margin: 30px 0 50px 60px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: row;
+}
+
+.work-left, .education-left {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.work-right {
+  flex: 2;
+}
+
+.education-right {
+  flex: 4;
+}
+
+
+.period {
+  width: 70px;
+  font-weight: 700;
+  font-size: 1em;
+  text-align: right;
+}
+
+.timeline {
+  width: 70px;
+  border-top: 2px solid #555;
+  margin: 10px;
+}
+
+.work-item h3, .education-item h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-top: -5px;
+}
+
+.role, .quali {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9em;
+  line-height: 1.3;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+  background-color: #333;
+}

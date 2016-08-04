@@ -1,8 +1,17 @@
-<h2>This is our works route</h2>
-{{outlet}}
+<h2 class="work">Where I've worked</h2>
 
 {{#each model as |work|}}
-  <h3>{{work.company}}</h3>
-  <p><{{work.role}}</p>
-  <p>{{work.description}}</p>
+<div class="work-item">
+  <div class="work-left">
+    <p class="period">{{work.period}}</p>
+    <div class='timeline'></div>
+  </div>
+
+  <div class="work-right">
+    <h3 class="serif">{{work.company}}</h3>
+    <p class="role">{{work.role}}</p>
+    <!-- <p class="serif">{{work.description}}</p> -->
+  </div>
+
+</div>
 {{/each}}
