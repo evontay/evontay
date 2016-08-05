@@ -1,15 +1,5 @@
-<h2 class="education">What I studied</h2>
+<h2 class="serif">What I've Studied</h2>
 
 {{#each model as |education|}}
-<div class="education-item">
-  <div class="education-left">
-    <p class="period"><{{education.period}}</p>
-    <div class='timeline'></div>
-  </div>
-
-  <div class="education-right">
-    <h3 class="serif">{{education.school}}</h3>
-    <p class="quali"><{{education.qualifications}}</p>
-  </div>
-</div>
+  {{show-educations item=education}}
 {{/each}}

@@ -1,28 +1,43 @@
 <div class="body">
   {{nav-bar}}
+
   <div class="bigwrap">
     {{outlet}}
   </div>
 </div>
 
 <footer>
-  <ul>
-    <li>{{#link-to 'index' class="button"}}
-      Home!
-    {{/link-to}}</li>
+  <h1>Say Hello</h1>
 
-    <li>{{#link-to 'projects' class="button"}}
-      Projects!
-    {{/link-to}}</li>
+  <p class="serif">I'm happy to chat with you about any job opportunities, collaborations or freelance work. Drop me a message below or email me at <span class="bold2">fumblies@gmail.com</span></p>
 
-    <li>{{#link-to 'educations' class="button"}}
-      Education!
-    {{/link-to}}</li>
+  <div class="contact">
+    <form>
+      <div>
+        <input class="field" type="name"  id="input-email" placeholder="Name">
+        <input class="field" type="email"  id="input-email" placeholder="Email">
+      </div>
 
-    <li>{{#link-to 'works' class="button"}}
-      Work!
-    {{/link-to}}</li>
+      <div>
+        <input class="field" type="text"  id="input-message" placeholder="Message">
+      </div>
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <!-- <img src="./img/evontay-logo.svg"/> -->
+
+  <ul class="social">
+    <li><a href="{{profile.github}}"><img src="./img/github.svg"></a></li>
+    <li><a href="{{profile.linkedin}}"><img src="./img/linkedin.svg"></a></li>
+    <li><a href="{{profile.twitter}}"><img src="./img/twitter.svg"></a></li>
+    <li><a href="{{profile.dribbble}}"><img src="./img/dribbble.svg"></a></li>
+    <li><a href="{{profile.behance}}"><img src="./img/behance.svg"></a></li>
+    <li><a href="{{profile.medium}}"><img src="./img/medium.svg"></a></li>
   </ul>
 
-  <img src="./img/evontay-logo.svg"/>
+
+  <p class='footer-info'>This website was lovingly crafted with Node.JS (backend) + Ember.JS (frontend). &copy; Evon Tay in 2016</p>
+
 </footer>
