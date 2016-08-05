@@ -28,7 +28,7 @@ h3 {font-size: 2em;}
 h4 {font-size: 1.8em;}
 h5 {font-size: 1.6em;}
 h6 {font-size: 1.3em;}
-p {font-size: 1.5em;}
+p {font-size: 1.2em;}
 
 .reg {font-weight: 400}
 .med {font-weight: 600}
@@ -39,6 +39,11 @@ p {font-size: 1.5em;}
 header {
   margin: 0 auto;
   text-align: center;
+}
+
+.header-logo {
+  width: 90px;
+  margin-bottom: 30px;
 }
 
 .intro {
@@ -59,6 +64,59 @@ header {
   padding: 20px;
 }
 
+/* ===== NAVIGATION ===== */
+.nav {
+  position: fixed;
+  left: 50px;
+  top: 70px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+
+.homebtn {
+  width: 50px;
+  left: 20px;
+  top: 20px;
+  position: fixed;
+  opacity: 0.5
+}
+
+.homebtn:hover {
+   opacity:1;
+   -webkit-transition: 0.2s ease-out;
+   -moz-transition: 0.2s ease-out;
+   transition: 0.2s ease-out;
+}
+
+
+.rotate {
+  transform-origin: left top 0;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+.nav ul li {
+  padding-left: 30px;
+  display: inline;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #999;
+}
+
+.nav a:hover {
+  color: #555;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
 
 
 /* ===== PROJECTS ===== */
@@ -86,29 +144,36 @@ header {
 
 .st {
   width: 50px;
-  border: 1px solid #555;
-  margin: 20px 0 30px 0;
+  border: 1px solid #888;
+  margin: 20px 0px 30px 0px;
 }
 
 .proj-info {
   flex:2;
   line-height: 1.5;
-  padding: 20px;
-  color: #555;
+  padding: 20px 20px 20px 30px;
+  color: #888;
 }
 
 .proj-info p, .proj-info h2 {
-  width: 80%;
+  width: 90%;
+}
+
+.proj-info p, .proj-btn-grp {
+  margin-left: 40px;
+  margin-top: 20px;
+  width: 85%;
 }
 
 .proj-info h2 {
   line-height: 1.1;
   margin-bottom: 30px;
+  font-size: 2em;
 }
 
 .proj-img {
   flex:3;
-  box-sizing: content-box;
+  box-sizing:content-box;
 }
 
 .proj-img > img {
@@ -145,6 +210,7 @@ header {
 }
 
 /* ===== RESUME ===== */
+
 
 .work, .education {
   width: 100%;

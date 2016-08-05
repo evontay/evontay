@@ -1,3 +1,4 @@
+<div id="top"></div>
 <header>
   {{#each model.profiles as |profile|}}
     <!-- <h3>{{profile.name}}</h3> -->
@@ -10,6 +11,9 @@
       <li><a href="{{profile.behance}}"><img src="./img/behance.svg"></a></li>
       <li><a href="{{profile.medium}}"><img src="./img/medium.svg"></a></li>
     </ul>
+
+    <img class="header-logo" src="./img/evontay-logo-circle.svg">
+
     <h3 class="serif intro">{{profile.description}}</h3>
 
   {{/each}}
@@ -19,23 +23,37 @@
   <img class="homebtn" src="./img/evontay-logo-fill.svg"/>
 {{/scroll-to}}
 
+<div class="nav">  <!-- <a href="#"><img src="./img/evontay-logo-circle.svg"/></a> -->
+    <ul class="rotate">
+    <li>{{scroll-to href='#projects' label='projects'}}</li>
+    <li>{{scroll-to href='#experience' label='experience'}}</li>
+    <li>{{scroll-to href='#education' label='education'}}</li>
+    <li>{{scroll-to href='#contact' label='contact'}}</li>
+  </ul>
+</div>
 
+<div id="projects">
+  <!-- <h2 class="serif">Projects</h2> -->
+  {{#each model.projects as |project|}}
+      {{#show-projects item=project}}
+      {{/show-projects}}
+  {{/each}}
+</div>
 
+<div id="experience">
+  <h2 class="serif">Where I've been</h2>
+  {{#each model.works as |work|}}
+      {{#show-work item=work}}
+      {{/show-work}}
+  {{/each}}
+</div>
 
-<!-- <h2 class="serif">Projects</h2> -->
-{{#each model.projects as |project|}}
-    {{#show-projects item=project}}
-    {{/show-projects}}
-{{/each}}
+<div id="education">
+  <h2 class="serif">What I've Studied</h2>
+  {{#each model.educations as |education|}}
+      {{#show-education item=education}}
+      {{/show-education}}
+  {{/each}}
+</div>
 
-<h2 class="serif">Where I've been</h2>
-{{#each model.works as |work|}}
-    {{#show-work item=work}}
-    {{/show-work}}
-{{/each}}
-
-<h2 class="serif">What I've Studied</h2>
-{{#each model.educations as |education|}}
-    {{#show-education item=education}}
-    {{/show-education}}
-{{/each}}
+<div id="contact"></div>
