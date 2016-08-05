@@ -1,11 +1,17 @@
 /*jshint node:true*/
 /* global require, module */
-var EmberApp = require('ember-cli/lib/broccoli/ember-app');
+var EmberApp = require('ember-cli/lib/broccoli/ember-app')
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
-  });
+    'ember-cli-preloader': {
+      paths: {
+        html: 'app/preloader/preloader.html',
+        css: 'app/preloader/preloader.css'
+      }
+    }
+  })
 
   // Use `app.import` to add additional libraries to the generated
   // output files.
@@ -20,5 +26,5 @@ module.exports = function(defaults) {
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
 
-  return app.toTree();
-};
+  return app.toTree()
+}
