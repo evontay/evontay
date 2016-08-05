@@ -12,18 +12,32 @@
   <p class="serif">I'm happy to chat with you about any job opportunities, collaborations or freelance work. Drop me a message below or email me at <span class="bold2">fumblies@gmail.com</span></p>
 
   <div class="contact">
-    <form>
-      <div>
-        <input class="field" type="name"  id="input-email" placeholder="Name">
-        <input class="field" type="email"  id="input-email" placeholder="Email">
-      </div>
+    <h3 class="pink"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></h3>
 
-      <div>
+    <form action="https://formspree.io/fumblies@gmail.com"
+      method="POST">
+      <input class="field" type="text" name="name" placeholder="Your Name">
+      <input class="field" type="hidden" name="_subject" value="New submission!" />
+      <input class="field" type="email" name="_replyto" placeholder="Your Email">
+      <input class="field" type="text" name="message" placeholder="Your Message">
+
+      <button type="submit" value="Send">Send</button>
+
+    </form>
+
+    <!-- <form action="https://formspree.io/your@email.com"
+      method="POST">
+
+        <input class="field" type="text" name="name" placeholder="Your Name">
+        <input class="field" type="email" name="_replyto" placeholder="Your Email">
+
+
+
         <input class="field" type="text"  id="input-message" placeholder="Message">
-      </div>
+
 
       <button type="submit">Submit</button>
-    </form>
+    </form> -->
   </div>
 
   <!-- <img src="./img/evontay-logo.svg"/> -->
