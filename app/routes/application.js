@@ -8,7 +8,7 @@ export default Ember.Route.extend({
   actions: {
     didTransition() {
       this.get('preloader').addLoadedClass('fade-out')
-      this.get('preloader').removePreloader(250)
+      this.get('preloader').removePreloader(400)
     }
   }
 })

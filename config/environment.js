@@ -17,8 +17,8 @@ module.exports = function (environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
       preloader: {
-        removeDelay: false,
-        loadedClass: false
+        loadedClass: 'disappear',
+        removeDelay: 400
       }
     }
   }
