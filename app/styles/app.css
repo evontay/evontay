@@ -2,6 +2,7 @@
 
 body {
   background-color: #dfdede;
+  border: 30px solid #f7dbd2;
   background-repeat: no-repeat;
   font-family: 'Raleway', sans-serif;
   color: #555;
@@ -11,6 +12,11 @@ body {
   padding: 20px;
 }
 
+.pink {color: #f7dbd2;}
+
+.center {
+  text-align: center;
+}
 /* ===== TEXT FORMATTING ===== */
 
 .serif {font-family: 'Crimson Text', serif;}
@@ -53,18 +59,34 @@ header {
   padding: 20px;
 }
 
+
+
 /* ===== PROJECTS ===== */
-.proj-item {
-  margin: 30px auto;
+.proj-itemA {
+  margin: 150px auto;
+  margin-left: 50px;
   display: flex;
   flex-direction: row;
   /*flex-wrap: wrap;*/
   background-color: #f1eded;
+  max-width: 1000px;
+  box-shadow: 0px 5px 5px 2px #999;
+}
+
+.proj-itemB {
+  margin: 150px auto;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: row;
+  /*flex-wrap: wrap;*/
+  background-color: #f1eded;
+  max-width: 1000px;
+  box-shadow: 0px 5px 5px 2px #999;
 }
 
 .st {
   width: 50px;
-  border: 1px solid #888;
+  border: 1px solid #555;
   margin: 20px 0 30px 0;
 }
 
@@ -72,7 +94,7 @@ header {
   flex:2;
   line-height: 1.5;
   padding: 20px;
-  color: #888;
+  color: #555;
 }
 
 .proj-info p, .proj-info h2 {
@@ -117,15 +139,24 @@ header {
 .proj-btn:hover {
   background-color: #888;
   color: #fff;
+  -webkit-transition: 0.2s ease-out;
+  -moz-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
 }
 
 /* ===== RESUME ===== */
 
 .work, .education {
-  font-weight: 700;
-  margin-bottom: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  /*position: absolute;*/
+}
+.empty {
+  flex: 1;
 }
 .work-item, .education-item {
+  flex: 1;
   margin: 30px 0 50px 60px;
   max-width: 600px;
   display: flex;
@@ -178,5 +209,5 @@ header {
 /* ===== FOOTER ===== */
 
 footer {
-  background-color: #333;
+  background-color: #f7dbd2;
 }

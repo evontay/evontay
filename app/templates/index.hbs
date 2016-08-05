@@ -15,7 +15,14 @@
   {{/each}}
 </header>
 
-<h2 class="serif">Projects</h2>
+{{#scroll-to href='#top'}}
+  <img class="homebtn" src="./img/evontay-logo-fill.svg"/>
+{{/scroll-to}}
+
+
+
+
+<!-- <h2 class="serif">Projects</h2> -->
 {{#each model.projects as |project|}}
     {{#show-projects item=project}}
     {{/show-projects}}
