@@ -1,0 +1,17 @@
+<div id='header'>
+  {{#each model.profiles as |profile|}}
+    <ul class="social">
+      <li><a href="{{profile.github}}"><img src="./img/github.svg"></a></li>
+      <li><a href="{{profile.linkedin}}"><img src="./img/linkedin.svg"></a></li>
+      <li><a href="{{profile.twitter}}"><img src="./img/twitter.svg"></a></li>
+      <li><a href="{{profile.dribbble}}"><img src="./img/dribbble.svg"></a></li>
+      <li><a href="{{profile.behance}}"><img src="./img/behance.svg"></a></li>
+      <li><a href="{{profile.medium}}"><img src="./img/medium.svg"></a></li>
+    </ul>
+
+    <img class="header-logo" src="./img/evontay-logo-circle.svg">
+
+    <h3 class="serif intro">{{profile.description}}</h3>
+
+  {{/each}}
+</div>
